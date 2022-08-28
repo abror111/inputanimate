@@ -1,0 +1,72 @@
+*{
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box;
+}
+body{
+                    background-color: rgb(24, 24, 2);
+                    background-image: url(https://storge.pic2.me/c/1360x800/841/57ca8f6eabd0e.jpg);
+                    background-repeat: no-repeat;
+                    background-size:cover;
+}
+form{
+                    margin: auto;
+                    width: 400px;
+                    padding:20px;
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform:translate(-50%,-50%)
+}
+.group{
+                    width: 400px;
+                    margin: auto;
+                    position:relative;  
+                 
+}
+input{
+                    background: none;
+                    border:none;
+                    width: 350px;
+                    padding: 10px 10px 10px 5px;
+                    border-bottom:1px solid #fff;
+                    color: #fff;
+                    font-size: 15px;
+}
+span{
+                    display: block;
+}
+label{
+            position: absolute;     
+            top: 10px;  
+          color:rgb(223, 45, 45);
+          font-size: 15px;
+          pointer-events: none;
+                
+}
+input:focus{
+                    outline: none;
+                   
+}
+input:focus~ label{
+                    top: -10px;      
+}
+
+input:focus~ label ,input:valid~label{
+                    top: -10px;      
+}
+span::after{
+                    content: "";
+                    width: 0;
+                    height: 2px;
+                    position: absolute;
+                    bottom:0;
+                    background-color:rgb(150, 12, 12);
+                    transition: 2s ease all;  
+}
+
+input:focus~span::after{
+                    width:88%;
+                    transition: 2s ease all;    
+                    background-color:rgb(12, 150, 19);         
+}
